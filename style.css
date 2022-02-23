@@ -17,6 +17,8 @@
 
   /* Typography */
   --ff-primary: 'Kumbh Sans', sans-serif;
+
+  --fs-400: 1rem;
 }
 
 /* ------------------------ */
@@ -128,6 +130,24 @@ select {
   color: var(--clr-white);
 }
 
+.d-none {
+  display: none;
+}
+
+.fs-normal {
+  font-size: var(--fs-400);
+}
+.fs-small {
+  font-size: 0.75rem;
+}
+.upper {
+  text-transform: uppercase;
+}
+
 /* ------------------------ */
 /* Components               */
 /* ------------------------ */
+
+body {
+  font-family: var(--ff-primary);
+}
