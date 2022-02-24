@@ -55,9 +55,9 @@ ol[role='list'] {
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
+  /* Set core body defaults */
 }
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -150,4 +150,83 @@ select {
 
 body {
   font-family: var(--ff-primary);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.navigation img {
+  width: 2rem;
+  aspect-ratio: 1;
+}
+
+.navigation ul li {
+  list-style: none;
+  padding: 2rem 0;
+}
+.navigation ul li:hover {
+  border-bottom: 3px solid var(--clr-primary-orange);
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  justify-content: center;
+}
+
+.cart-holder {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.logo-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-toggle,
+.cart {
+  background-color: transparent;
+  border: 0;
+  width: 2rem;
+  aspect-ratio: 1;
+}
+.nav-toggle:hover,
+.cart:hover {
+  cursor: pointer;
+}
+
+.images {
+  display: grid;
+}
+
+@media only screen and (min-width: 45rem) {
+  main {
+    margin-top: 5rem;
+  }
+  .nav-toggle {
+    display: none;
+  }
+
+  .navigation ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    margin: 0;
+  }
+  .navigation {
+    border-bottom: 1px solid var(--clr-secondary-gray);
+    margin: 0;
+  }
+
+  .thumbnails {
+    display: block;
+  }
 }
