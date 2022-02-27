@@ -202,15 +202,70 @@ body {
   cursor: pointer;
 }
 
-.images {
-  display: grid;
+.image-media {
+  position: relative;
 }
+
+.previous-arrow,
+.next-arrow {
+  background: white;
+  position: absolute;
+  z-index: 1;
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+}
+.previous-arrow {
+  transform: translate(50%, -50%);
+}
+.next-arrow {
+  left: 100%;
+  transform: translate(-150%, -50%);
+}
+
+.images {
+  position: relative;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  /* transform: translate(-100%); */
+}
+/* 
+.images::before,
+.images::after {
+  position: absolute;
+  display: grid;
+  place-content: center;
+  grid-auto-flow: column;
+  top: 50%;
+  width: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: white;
+}
+
+.images::before {
+  content: url(./images/icon-previous.svg);
+  transform: translate(50%, -50%);
+}
+.images::after {
+  content: url(./images/icon-next.svg);
+  left: 100%;
+  transform: translate(-150%, -50%);
+} */
 
 @media only screen and (min-width: 45rem) {
   main {
     margin-top: 5rem;
   }
-  .nav-toggle {
+  .nav-toggle,
+  .next-arrow,
+  .previous-arrow {
     display: none;
   }
 
